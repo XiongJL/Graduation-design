@@ -1,0 +1,347 @@
+/*头部顶端登录注册栏开始*/
+#box{
+	background-color: #000;
+}
+
+#box .innerbox{
+	width: 1200px;
+	margin: auto;
+	height: 28px;
+    text-align: right;
+    position: relative;
+}
+
+#box .innerbox  .begin{
+	position: absolute;
+	display: inline-block;
+	color: #fff;
+	left: 280px;
+	top: 6px;
+}
+
+#box .innerbox span{
+	display: inline-block;
+	color: #737373;
+	line-height: 28px;
+	font-size: 14px;
+	margin-right: 100px;
+}
+
+
+#box .innerbox span a{
+	color: #F56202;
+	
+}
+
+#header{
+	height: 84px;
+	position: relative;
+	width: 1200px;
+	margin: auto;
+}
+
+#logo{
+	display: block;
+	width:200px;
+	height: 112px;
+	position: absolute;
+	left:0;
+	bottom:0;
+}
+
+
+
+#searchcontainer{
+	width: 440px;
+	height:36px;
+	border: solid 2px #ff6600;
+	position: absolute;
+	right:0;
+	top:4px;
+}
+
+#searchcontainer input{
+	outline: none;
+}
+
+#searchcontainer input.keyword{
+	width:385px;
+	height:36px;
+	border:0;
+	color:#ccc;
+	padding-left:5px;
+}
+
+#searchcontainer input.btnsearch{
+	width:50px;
+	height:36px;
+	border:0;
+	position: absolute;
+	right:0;
+	top:0;
+	background-image: url(../img/bgicon.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	cursor: pointer;
+}
+
+/*订单交易开始*/
+#shop{
+	width: 1200px;
+	margin: auto;
+font-size: 14px;
+}
+#shop p>a{
+	display: inline-block;
+	margin-left: 788px;
+	color: #6BAFF2;
+}
+
+#shop .sub{
+	background-color: #F2F2F2;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 10px;
+}
+#shop .sub span.a{
+	display: inline-block;
+	margin-left: 762px;
+}
+
+#shop .sub span.b{
+	color: #FF6600;
+}
+#shop p.first{
+	color: #D5D5D5;
+	margin-top: 10px;
+}
+#shop p.first span{
+	display: inline-block;
+	text-align: center;
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #FF6600;
+	color: #fff;
+}
+
+#shop .bank{
+	height: 80px;
+	line-height: 80px;
+	background-color: #F2F2F2;
+	margin-top: 10px;
+}
+
+#shop .bank span.first{
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	width: 80px;
+	display: inline-block;
+	margin-left: 100px;
+	border: 2px solid #FF6600;
+	cursor: pointer;
+	background-image: url(../bookimg/34.png);
+    background-repeat: no-repeat;
+    background-position: 63px bottom;
+}
+
+#shop .bank span.second{
+	display: inline-block;
+	margin-left: 100px;
+	padding-left: 10px;
+	border: 2px solid #E1E1E1;
+	height: 30px;
+	line-height: 30px;
+	width: 280px;
+}
+
+#shop .bank span.second span.seconda{
+	display: inline-block;
+	color: #FF6600;
+	margin-left: 40px;
+}
+
+#shop .bank span.second span.secondb{
+	display: inline-block;
+	color: #E1E1E1;
+	margin-left: 40px;
+}
+
+#shop .bank span.add{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	background-color: #999999;
+	text-align: center;
+	width: 150px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+#shop .bank span.a{
+	margin-left: 332px;
+}
+#shop .bank span.a span.b{
+	color: #FF6600;
+}
+
+#shop>a.pay{
+	display: block;
+	width: 190px;
+	height: 50px;
+	background-color: #FF6600;
+	color: #FFFFFF;
+	line-height: 50px;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-left: 1000px;
+}
+
+#shop p.other{
+	color: #D5D5D5;
+	margin-top: 10px;
+}
+#shop p.other span{
+	display: inline-block;
+	text-align: center;
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #76AFF6;
+	color: #fff;
+}
+#shop .otherpay{
+	height: 80px;
+	line-height: 80px;
+	background-color: #F2F2F2;
+	text-align: center;
+}
+#shop .otherpay a{
+	color: #000;
+	padding-right: 15px;
+	padding-left: 15px;
+	text-align: center;
+}
+/*订单交易结束*/
+
+#ad{
+	width: 1200px;
+	margin: auto;
+}
+
+#end{
+	margin-top: 0;
+}
+
+/*弹出层开始*/
+.true{
+	width: 100%;
+	height: 1000px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+}
+
+.true .close{
+	text-align: center;
+	width: 380px;
+	background-color: #fff;
+	padding-bottom: 20px;
+	position: fixed;
+    top: calc(50% - 110px);
+    left: calc(50% - 190px);
+}
+.true  .close p.first{
+	background-color: #E6E6E6;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 5px;
+	color: #717171;
+	cursor: pointer;
+}
+.true  .close p.first>span{
+	display: inline-block;
+	color: #BFBFBF;
+	width: 10px;
+	margin-left: 20px;
+	text-align: center;
+	margin-left: 292px;
+	
+}
+
+.true  .close p.last{
+	font-size: 18px;
+	color: #C0C0C0;
+}
+.true  .close>a{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	background-color: #FF6600;
+	color: #fff;
+	margin-top: 10px;
+}
+
+
+
+.false{
+	width: 100%;
+	height: 1000px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+}
+
+.false .close{
+	text-align: center;
+	width: 380px;
+	background-color: #fff;
+	padding-bottom: 20px;
+	position: fixed;
+    top: calc(50% - 110px);
+    left: calc(50% - 190px);
+}
+.false .close p.first{
+	background-color: #E6E6E6;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 5px;
+	color: #717171;
+	cursor: pointer;
+}
+.false  .close p.first>span{
+	display: inline-block;
+	color: #BFBFBF;
+	width: 10px;
+	margin-left: 20px;
+	text-align: center;
+	margin-left: 292px;
+	
+}
+
+.false  .close p.last{
+	font-size: 18px;
+	color: #C0C0C0;
+}
+.false  .close>a{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	background-color: #FF6600;
+	color: #fff;
+	margin-top: 10px;
+}
+/*弹出层结束*/

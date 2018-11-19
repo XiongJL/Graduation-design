@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/commen.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/entry.css"/>
+		<script src="/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/entry.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+        function login() {
+            $.ajax({
+            //几个参数需要注意一下
+                type: "GET",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "/api/login" ,//url
+                contentType:"application/json;charset=utf-8",
+                cache:false,
+                data: $('#login').serialize(),
+                success: function (result) {
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    if (result == 1) {
+                    	window.location.href ="/index"
+                    }else {
+                    	alert("账户或密码错误");
+                    }
+                    ;
+                },
+                error : function(result) {
+                	console.log(result);
+                    alert("异常！");
+                }
+            });
+        }
+    </script>
+	</head>
+	<body>
+		<!--头部顶端登录注册栏开始-->
+		<div id="box">
+			<div class="innerbox">
+				<a href="###" class="begin">legouchina.cn</a>
+				<span>欢迎光临<a href="index.html">乐购</a>，请<a href="entry.html" style="color: #737373;">登录</a>\<a href="joinus.html">注册</a></span>
+			</div>
+		</div>
+		<!--头部顶端登录注册栏结束-->
+		
+		<!--中间logo图片开始-->
+		<div id="logo">
+			
+			<a href=""><img src="/img/01.png"/></a>
+			<span>欢迎登陆</span>
+		</div>
+		<!--中间logo图片结束-->
+		<!--登陆页面开始-->
+		<div id="banner">
+			<div class="join">
+			
+					<span class="active">扫码登陆</span>
+					<span>账户登陆</span>
+			<div class="left">
+				<img src="/img/03.png"/>
+				<p>打开手机版  乐购APP  扫一扫</p>
+
+			</div>
+			
+			<div class="right">
+			<!--  <form th:action="@{/api/login}" th:method = "get">-->	
+				<form id="login" onsubmit="return false" action="##" method="get">
+				<img src="/img/04.png"/><input type="text" placeholder="请输入用户名" class="username" name="username"/>
+				 <img src="/img/06.bmp" class="bottom_image"/><input type="text" placeholder="请输入用户密码" name="password" class="password"/>
+				<p><input type="checkbox" class="check"/>自动登录<span>忘记密码</span></p>
+				
+				<input type="button"  onclick="login()" class="submit" value="登   录"/>
+				</form>
+				<div class="_bottom">
+					<a href=""><span>立即注册</span></a>		
+				</div>
+				
+			</div>
+			</div>
+		</div>
+		<!--登陆页面结束-->
+		<!--底部开始-->
+		<div class="footer">
+			<div class="end">
+				<a href="###">公司简介</a>|
+			<a href="###">Investor  Relations</a> |
+			<a href="###">网站联盟</a>  |
+			<a href="###">乐购招商</a>  |
+			<a href="###">机构销售</a>  |
+			<a href="###">手机乐购</a>  |
+			<a href="###">官方Blog</a>  |
+			<a href="###">热词搜索</a>  
+			
+			</div>
+			
+			<p>Copyright &copy; 乐购网  2014 - 2016  All Right Reserved </p>
+		</div>
+		<!--底部结束-->
+	</body>
+</html>

@@ -1,0 +1,262 @@
+/*头部顶端登录注册栏开始*/
+#box{
+	background-color: #000;
+}
+
+#box .innerbox{
+	width: 1200px;
+	margin: auto;
+	height: 28px;
+    text-align: right;
+    position: relative;
+}
+
+#box .innerbox  .begin{
+	position: absolute;
+	display: inline-block;
+	color: #fff;
+	left: 280px;
+	top: 6px;
+}
+
+#box .innerbox span{
+	display: inline-block;
+	color: #737373;
+	line-height: 28px;
+	font-size: 14px;
+	margin-right: 100px;
+}
+
+
+#box .innerbox span a{
+	color: #F56202;
+	
+}
+
+#header{
+	height: 84px;
+	position: relative;
+	width: 1200px;
+	margin: auto;
+}
+
+#logo{
+	display: block;
+	width:200px;
+	height: 112px;
+	position: absolute;
+	left:0;
+	bottom:0;
+}
+
+
+
+#searchcontainer{
+	width: 440px;
+	height:36px;
+	border: solid 2px #ff6600;
+	position: absolute;
+	right:0;
+	top:4px;
+}
+
+#searchcontainer input{
+	outline: none;
+}
+
+#searchcontainer input.keyword{
+	width:385px;
+	height:36px;
+	border:0;
+	color:#ccc;
+	padding-left:5px;
+}
+
+#searchcontainer input.btnsearch{
+	width:50px;
+	height:36px;
+	border:0;
+	position: absolute;
+	right:0;
+	top:0;
+	background-image: url(../img/bgicon.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	cursor: pointer;
+}
+
+#header .address{
+	position: absolute;
+	    right: 0;
+    top: 57px;
+}
+/*全部商品开始*/
+#allshop{
+	width: 1200px;
+	margin: auto;
+
+}
+#allshop>p{
+	font-size: 20px;
+	color: #FF6600;
+}
+
+#allshop .title>ul{
+	background-color: #F2F2F2;
+	width: 1200px;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+}
+#allshop .title>ul>li{
+	float: left;
+	margin-left: 70px;
+	font-size: 16px;
+	color: #B6B6B6;
+	padding-right: 100px;
+}
+
+#allshop .spacil{
+	border-top: 3px solid #DFDFDF;
+}
+#allshop .shop{
+border-bottom: 1px solid #EAEAEA;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+#allshop .shop>ul{
+	width: 1200px;
+	overflow: hidden;
+	height: 150px;
+	line-height: 150px;
+	margin-bottom: 10px;
+}
+#allshop .shop>ul li{
+	float: left;
+	margin-left: 70px;
+	padding-right: 37px;
+
+}
+
+#allshop .shop>ul li input.sum{
+	width: 60px;
+	text-align: center;
+	height: 20px;
+}
+
+#allshop .shop>ul li span{
+	display: inline-block;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	width: 22px;
+	border: 1px solid #A9A9A9;
+	cursor: pointer;
+}
+#allshop .shop>ul li a{
+	color: #000;
+}
+#allshop .allcho{
+border: 1px solid #EAEAEA;
+margin-top: 20px;
+margin-bottom: 10px;
+
+}
+#allshop .allcho>ul{
+	width: 1200px;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+}
+#allshop .allcho>ul li{
+	float: left;
+	margin-left: 60px;
+	padding-right: 90px;
+	color: #C1C1C1;
+	font-size: 16px;
+
+}
+#allshop .allcho>ul li span{
+	color: #5E5E5E;
+	font-weight: bold;
+}
+#allshop .allcho>ul li span.a{
+	color: #FF6600;
+}
+
+#allshop .allcho>ul li a{
+	display: inline-block;
+	background-color: #FF6600;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #FFFFFF;
+}
+/*全部商品结束*/
+
+
+
+/*人气单品开始*/
+#hotbook{
+	height: 400px;
+}
+#hotbook .content{
+	width: 1200px;
+	margin: auto;
+}
+#hotbook .content>p{
+	border-bottom:6px solid #FF6600 ;
+}
+
+#hotbook .content p>span{
+	display: inline-block;
+	height: 40px;
+	width: 100px;
+	color: #fff;
+	background-color: #FF6600;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+#hotbook .content ul li{
+	width: 198px;
+	float: left;
+}
+
+#hotbook .content ul li>a{
+	margin-left: 25px;
+}
+#hotbook .content ul li>span{
+	display: inline-block;
+	margin-left: 8px;
+}
+#hotbook .content ul li p>a{
+	color: #000;
+	margin-left: 8px;
+}
+#hotbook .content ul li>span.a{
+	margin-left: 8px;
+	display: inline-block;
+	color: #f00;
+	font-size: 18px;
+}
+
+#hotbook .content ul li>span.b{
+	margin-left: 20px;
+	display: inline-block;
+		color: #D5D5D5;
+	font-size: 18px;
+}
+/*人气单品结束*/
+#ad{
+	width: 1200px;
+	margin: auto;
+}
+
+#end{
+	margin-top: 0;
+}
+
+

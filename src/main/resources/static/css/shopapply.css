@@ -1,0 +1,416 @@
+/*头部顶端登录注册栏开始*/
+#box{
+	background-color: #000;
+}
+
+#box .innerbox{
+	width: 1200px;
+	margin: auto;
+	height: 28px;
+    text-align: right;
+    position: relative;
+}
+
+#box .innerbox  .begin{
+	position: absolute;
+	display: inline-block;
+	color: #fff;
+	left: 260px;
+	top: 6px;
+}
+
+#box .innerbox span{
+	display: inline-block;
+	color: #737373;
+	line-height: 28px;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+
+#box .innerbox span a{
+	color: #F56202;
+	
+}
+/*头部顶端登录注册栏结束*/
+
+/*中间logo图片开始*/
+#logo{
+	width: 1200px;
+	margin: auto;
+	position: relative;
+}
+
+#logo>a{
+	position: absolute;
+	left: 0;
+	top: -28px;
+}
+
+#logo span{
+	display: inline-block;
+	margin-left: 270px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 26px;
+	color: #676767;
+}
+
+#logo .lists{
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+
+#logo .lists>a{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #666666;
+	margin-right: 20px;
+}
+
+#logo .lists>a.a{
+	background-color: #FF6600;
+	color: #FFFFFF;
+}
+/*中间logo图片结束*/
+
+/*主页banner开始*/
+#banner{
+	margin-top: 14px;
+	position: relative;
+}
+#banner .innerbox{
+	width: 1200px;
+/*	margin-top: 20px;*/
+	margin: auto;
+	position: relative;
+}
+#banner .innerbox .first{
+	background-color: #fff;
+	width: 240px;
+}
+
+#banner .innerbox .first>p{
+	background-color: #FF6600;
+	color: #FFFFFF;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	font-size: 16px;
+	margin-top: 10px;
+}
+#banner .innerbox .first ul li{
+	width: 270px;
+	height: 140px;
+	position: relative;
+	margin-left: 20px;
+}
+#banner .innerbox .first ul li>p{
+	font-size: 18px;
+	padding-top: 30px;
+	margin-bottom: 10px;
+}
+
+#banner .innerbox .first ul li>a{
+	color: #000;
+}
+
+#banner .innerbox .first ul li>img{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+#banner .innerbox .last{
+	width: 240px;
+	height: 460px;
+	background-color: #FFFFFF;
+}
+
+#banner .innerbox .last img{
+	margin-left: 20px;
+	margin-top: 10px;
+}
+#banner .innerbox .last a.a{
+	display: inline-block;
+	width: 100px;
+	font-size: 16px;
+	color: #000;
+}
+
+#banner .innerbox .last a.b{
+	display: inline-block;
+	color: #A4A4A4;
+	margin-bottom: 20px;
+	position: absolute;
+	left: 74px;
+	top: 50px;
+}
+#banner .innerbox .last p.a{
+	margin-top: 20px;
+	margin-left: 10px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+#banner .innerbox .last p.a>span.a{
+	display: inline-block;
+	position: absolute;
+	top: 14px;
+	padding-left: 10px;
+}
+
+#banner .innerbox .last p.b{
+	margin-top: 20px;
+	margin-left: 16px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+#banner .innerbox .last p.b>span.a{
+	display: inline-block;
+	position: absolute;
+	top: 14px;
+	padding-left: 10px;
+}
+
+#banner .innerbox .last p.img{
+	position: absolute;
+	left: -26px;
+}
+
+#banner .innerbox .last p.entry{
+	margin-top: 63px;
+	margin-left: 43px;
+	color: #A4A4A4;
+	font-size: 14px;
+	
+}
+#banner .innerbox .last p.entry>a{
+	color: #000;
+}
+#banner .innerbox .last p.entrya{
+	margin-top: 30px;
+}
+#banner .innerbox .last p.entrya>a{
+	width: 40px;
+	height: 40px;
+	color: #000;
+	display: inline-block;
+	text-align: center;
+	margin-right: 20px;
+}
+
+/*全部商品开始*/
+#allshop{
+	width: 900px;
+	margin: auto;
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+#allshop .firsttitle{
+	height: 50px;
+	background-color: #F2F2F2;
+	line-height: 50px;
+}
+#allshop .firsttitle>span{
+	display: inline-block;
+	margin-right: 90px;
+}
+#allshop .firsttitle span.b{
+	padding-left: 10px;
+	display: inline-block;
+	font-size: 18px;
+	color: #FF6600;
+}
+#allshop .firsttitle span.a{
+	color: #FF6600;
+}
+#allshop>p{
+	padding-left: 10px;
+	font-size: 20px;
+	color: #FF6600;
+}
+
+#allshop .title>ul{
+	background-color: #F2F2F2;
+	width: 900px;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+}
+#allshop .title>ul>li{
+	float: left;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #B6B6B6;
+	padding-right: 165px;
+}
+
+#allshop .spacil{
+	border-top: 3px solid #DFDFDF;
+}
+#allshop .shop{
+border-bottom: 1px solid #EAEAEA;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+#allshop .shop>ul{
+	width: 900px;
+	overflow: hidden;
+	height: 150px;
+	line-height: 150px;
+	margin-bottom: 10px;
+}
+#allshop .shop>ul li{
+	float: left;
+	margin-left: 20px;
+	padding-right: 100px;
+
+}
+
+#allshop .shop>ul li input.sum{
+	width: 60px;
+	text-align: center;
+	height: 20px;
+}
+
+#allshop .shop>ul li span{
+	display: inline-block;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	width: 22px;
+	border: 1px solid #A9A9A9;
+	cursor: pointer;
+}
+#allshop .shop>ul li a{
+	
+	color: #FF6600;
+}
+#allshop .shop>p{
+	text-align: right;
+}
+#allshop .shop>p>a{
+	margin-right: 20px;
+	color: #FF6600;
+}
+#allshop .allcho{
+border: 1px solid #EAEAEA;
+margin-top: 20px;
+margin-bottom: 10px;
+
+}
+#allshop .allcho>ul{
+	width: 900px;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+}
+#allshop .allcho>ul li{
+	float: left;
+	margin-left: 80px;
+	color: #C1C1C1;
+	font-size: 16px;
+
+}
+#allshop .allcho>ul li span{
+	color: #5E5E5E;
+	font-weight: bold;
+}
+#allshop .allcho>ul li span.a{
+	color: #FF6600;
+}
+
+#allshop .allcho>ul li a{
+	display: inline-block;
+	background-color: #FF6600;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #FFFFFF;
+}
+/*全部商品结束*/
+
+/*人气单品结束*/
+#ad{
+	width: 1200px;
+	margin: auto;
+	margin-top: 340px;
+}
+
+#end{
+	margin-top: 0;
+}
+
+
+/*弹出层开始*/
+.true{
+	width: 100%;
+	height: 1440px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+}
+
+.true .close{
+	text-align: center;
+	width: 380px;
+	background-color: #fff;
+	padding-bottom: 20px;
+	position: fixed;
+    top: calc(50% - 110px);
+    left: calc(50% - 190px);
+}
+.true  .close p.first{
+	background-color: #E6E6E6;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 5px;
+	color: #717171;
+	cursor: pointer;
+}
+.true  .close p.first>span{
+	display: inline-block;
+	color: #BFBFBF;
+	width: 10px;
+	margin-left: 20px;
+	text-align: center;
+	margin-left: 292px;
+	
+}
+.true  .close>span{
+	font-size: 14px;
+}
+.true  .close p.last>a.a{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #E6E6E6;
+	color: #6A6A6A;
+	margin-right: 10px;
+}
+
+.true  .close p.last>a.b{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #FF6600;
+	color: #FFFFFF;
+	margin-left: 10px;
+}
+/*确认去结束*/

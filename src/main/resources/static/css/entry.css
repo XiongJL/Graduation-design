@@ -1,0 +1,207 @@
+/*头部顶端登录注册栏开始*/
+#box{
+	background-color: #000;
+}
+
+#box .innerbox{
+	width: 1200px;
+	margin: auto;
+	height: 28px;
+    text-align: right;
+    position: relative;
+}
+
+#box .innerbox  .begin{
+	position: absolute;
+	display: inline-block;
+	color: #fff;
+	left: 216px;
+	top: 6px;
+}
+
+#box .innerbox span{
+	display: inline-block;
+	color: #737373;
+	line-height: 28px;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+
+#box .innerbox span a{
+	color: #F56202;
+	
+}
+/*头部顶端登录注册栏结束*/
+
+/*中间logo图片开始*/
+#logo{
+	width: 1200px;
+	margin: auto;
+	position: relative;
+}
+
+#logo a{
+	position: absolute;
+	left: 0;
+	top: -28px;
+}
+
+#logo span{
+	display: inline-block;
+	margin-left: 240px;
+	width: 110px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 26px;
+	color: #676767;
+}
+/*中间logo图片结束*/
+
+/*注册banner页面开始*/
+#banner{
+height: 413px;
+background-image: url(../img/02.png);
+margin-top: -3px;
+position: relative;
+}
+
+#banner .join{
+	width: 287px;
+	height: 303px;
+	background-color: #fff;
+	position: absolute;
+	left: 863px;
+	top: 53px;
+
+}
+
+#banner .join span{
+	display: inline-block;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	margin-left: 40px;
+	cursor: pointer;
+}
+#banner .join .active{
+	color: #FF6A09;
+}
+
+#banner .join .left img{
+	margin-left: 26px;
+	margin-top: 30px;
+}
+
+#banner .join .left p{
+	text-align: center;
+	margin-top: 30px;
+}
+#banner .join .right{
+	position: relative;
+	display: none;
+}
+#banner .join .right img{
+	position: absolute;
+	left: 26px;
+	top: 19px;
+}
+#banner .join .right  .bottom_image{
+	position: absolute;
+	left: 25px;
+	top: 71px;
+	height: 36px;
+	width: 32px;
+}
+#banner .join .right .username{
+	width: 200px;
+	height: 29px;
+	margin-left: 56px;
+	margin-top: 20px;
+	outline: none;
+	/*background-image: url(../img/04.png);
+	background-repeat: no-repeat;*/
+}
+
+#banner .join .right .password{
+	width: 200px;
+	height: 29px;
+	margin-left: 56px;
+	margin-top: 20px;
+	outline: none;
+	/*background-image: url(../img/04.png);
+	background-repeat: no-repeat;*/
+}
+#banner .join .right p{
+	width: 240px;
+	margin-left: 23px;
+	margin-top: 20px;
+	padding-right: 0;
+}
+
+#banner .join .right p .check{
+	
+}
+
+#banner .join .right p span{
+	width: 120px;
+	text-align: right;
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+#banner .join .right .submit{
+	width: 240px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 23px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #FF6600;
+	font-size: 18px;
+	color: #fff;
+    text-align: center;
+}
+
+#banner .join .right ._bottom{
+	border-top: 1px solid #E6E6E6;
+
+}
+
+#banner .join .right ._bottom span{
+
+	display: inline-block;
+		width: 100px;
+	color: #FF6600;
+	background-image: url(../img/05.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	text-align: right;
+margin-left: 85px;
+}
+/*注册banner页面结束*/
+
+/*底部开始*/
+.footer{
+	width: 1200px;
+	margin: auto;
+}
+
+.footer .end{
+	margin-top: 20px;
+	text-align: center;
+}
+.footer a{
+	
+	padding-right: 15px;
+	padding-left: 15px;
+	color: #000000;
+	text-align: center;
+}
+
+.footer p{
+	margin-top: 20px;
+	text-align: center;
+}
+/*底部结束*/

@@ -7,5 +7,5 @@ import neu.xiong.ELK.design.entity.Customer;
 public interface CustomerDao extends JpaRepository<Customer, Integer> {
 
 	Customer findByUsername(String username);
-
+	
 }

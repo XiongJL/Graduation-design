@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<!-- th:fragment 来完成 -->
+<div id="toplogin" th:fragment="topstate">
+			<div class="innerbox loginright">
+				<span>欢迎光临<a href="index" >乐购</a>，</span>
+					<span th:if="${session.state} neq 1">请<a href="/login" class="lg" >登录</a>\<a href="joinus.html" >注册</a></span>
+					<span th:if="${session.state} eq 1"><span th:text="${session.username}"></span><a href="logout" >      登出</a></span>
+				
+			</div>
+</div>
+</body>
+</html>

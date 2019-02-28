@@ -18,7 +18,7 @@ public class Customer {
 	
 	private String password;
 	
-	private String state;
+	private int state;
 
 	public int getCtid() {
 		return ctid;
@@ -44,11 +44,11 @@ public class Customer {
 		this.password = password;
 	}
 
-	public String getState() {
+	public int getState() {
 		return state;
 	}
 
-	public void setState(String state) {
+	public void setState(int state) {
 		this.state = state;
 	}
 

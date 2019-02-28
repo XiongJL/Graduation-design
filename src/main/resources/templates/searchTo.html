@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- 封装搜索栏 -->
+<body>
+	<div id="searchcontainer" th:fragment="searchTo">
+				<form method="get" action="/search">
+					<input type="text" name="searchinput" class="keyword" value="创意文具"
+						data-title="创意文具" />
+					<input type="submit" class="btnsearch" value=""/>
+				</form>
+			</div>
+</body>
+</html>

@@ -13,25 +13,14 @@
 <body>
 	<!--头部顶端登录注册栏开始-->
 	<div id="toplogin" th:include="state :: topstate"></div>
-
+	<span th:substi></span>
 	<div class="innerbox">
 		<div id="header">
 			<a href="###" id="logo"><img src="img/LOGO_02.jpg"></a>
-			<div id="searchcontainer">
-				<form method="post" action="">
-					<input type="text" name="searchinput" class="keyword" value="创意文具"
-						data-title="创意文具" /><input type="button" class="btnsearch" />
-				</form>
-			</div>
-			<div id="fixedwrapper">
-				<span>logo</span>
-				<div id="topsearchcontainer">
-					<form method="post" action="">
-						<input type="text" name="searchinput" class="keyword" value="创意文具"
-							data-title="创意文具" /><input type="button" class="btnsearch" />
-					</form>
-				</div>
-			</div>
+			
+			<!-- 引入搜索栏 -->
+			<div id="searchcontainer" th:include="searchTo :: searchTo">		</div>
+			
 			<div id="shoppingcar">
 				<a href="shopcar.html" class="car">购物车 <span>3</span></a><a
 					href="paycenter.html" class="order">我的订单</a>

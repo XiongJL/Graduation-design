@@ -12,8 +12,9 @@ function _form() {
 	$("#signupForm").validate({
 		errorPlacement: function(error, element) {
 			
-			
+			element.parent().find("span[name='error']").html("*")
 			element.parent().find("span[name='error']").html("*"+$(error).html())
+			
 	},
 	errorElement:'em',
 		rules: {
@@ -24,10 +25,6 @@ function _form() {
 			password2: {
 				required: true,
 				minlength: 6
-			},
-			password1: {
-				required: true,
-				equalTo: "password2"
 			},
 			phone: {
 				required: true,
@@ -66,13 +63,13 @@ function _inputO() {
 		username.onfocus = function() {
 				username.placeholder = '';
 			}
-		var _password = document.getElementsByName('password2')[0];
-		_password.onfocus = function() {
-				_password.placeholder = '';
+		var password = document.getElementsByName('password2')[0];
+		password.onfocus = function() {
+				password.placeholder = '';
 			}
-	var _password1 = document.getElementsByName('password1')[0];
-	_password1.onfocus = function() {
-		_password1.placeholder = '';
+	var password1 = document.getElementsByName('password1')[0];
+	password1.onfocus = function() {
+		password1.placeholder = '';
 	}
 	var phone = document.getElementsByName('phone')[0];
 	phone.onfocus = function() {

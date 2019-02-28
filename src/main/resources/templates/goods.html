@@ -14,7 +14,8 @@
 		<div class="innerbox">		
 			<div id="header">
 				<a href="###" id="logo"><img src="../img/LOGO_02.jpg"></a>
-				<div id="searchcontainer"><form method="post" action=""><input type="text" name="searchinput" class="keyword"/><input type="button" class="btnsearch" /></form></div>
+			<!-- 引入搜索栏 -->
+			<div id="searchcontainer" th:include="searchTo :: searchTo">		</div>	       
 				<div id="shoppingcar">
 					<a href="###" class="car">购物车 <span>3</span></a><a href="###" class="order">我的订单</a>
 				</div>
@@ -40,7 +41,7 @@
 				<div class="bookphoto">
 				<!--放大镜开始-->
 				<div class="small">
-						<img src="../bookimg/02.png"/>
+						<img th:src="|http://${goods.goodsImg}|"/>
 						<div class="zoom">
 			
 						</div>
@@ -56,10 +57,9 @@
 				<!--放大镜结束-->
 					<div class="text">
 						<h2><span th:text="${goods.goodsName}"></span></h2>
-						<p>《偷影子的人》 作者马克 . 李维重磅新作，法国连续60年在榜，销量突破120万册</p>
-						<span>[法]  马克 . 李维  著; 杨亦雨  译</span>
+						<p><span th:text="${goods.goodsInfo}"></span></p>
 						<div class="innertext">
-							<p>乐 购 价 ：<span>￥26.20</span>[6.9折] [定价：￥38.00](降价通知)</p>
+							<p>乐 购 价 ：<span th:text="|￥${goods.goodsPrice}|"></span>[6.9折]</p>
 							<p class="b">促销信息：<span>满减  每满150.00，可减50.00元现金</span><a href="###">详情>></a></p>
 							<p>领券<a href="###"><img src="../bookimg/03.png"/></a><a href="###"><img src="../bookimg/03.png"/></a></p>
 							<div class="rew">
@@ -75,7 +75,8 @@
 								<li class="addnum">+</li>
 								<li class="reduce">-</li>
 							</ul>
-						<a href="###">加入购物车</a></p>
+						<a th:href="@{'/api/addShopCar?cusId='+${session.cusId}+'&goodsId='+${goods.goodsId}}">加入购物车</a>
+						
 					</div>
 					
 				</div>
@@ -91,44 +92,44 @@
 				<ul>
 					<li>
 						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
 						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
 						<li>
 						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
 						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
 						<li>
 						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
 						<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
 						<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
 						<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
 					
@@ -144,45 +145,45 @@
 				<ul>
 					<li class="a">看了又看</li>
 					<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
-						<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+					<li>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
-						<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+					<li>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
-						<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+					<li>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
-						<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+					<li>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
-						<li>
-						<a href="###"><img src="bookimg/22935553-1_l.jpg"/></a>
-						<img src="bookimg/03-产品详情页面_03.png"/>
+					<li>
+						<a href="###"><img src="../bookimg/22935553-1_l.jpg"/></a>
+						<img src="../bookimg/03-产品详情页面_03.png"/>
 						<p><a href="###">白夜行   东野上吾</a></p>
-						<span>推荐</span><img src="bookimg/03-产品详情页面_07.png"/>
+						<span>推荐</span><img src="../bookimg/03-产品详情页面_07.png"/>
 						<span class="a">￥：38  </span><span class="b">￥:58</span>
 					</li>
 				</ul>
@@ -197,7 +198,7 @@
 				</div>
 			<div class="totle">
 				<div class="bookimage">
-					<img src="bookimg/03-产品详情-B.jpg"/>
+					<img src="../bookimg/03-产品详情-B.jpg"/>
 				</div>
 				<div class="text">
 					<p>作品简介</p>

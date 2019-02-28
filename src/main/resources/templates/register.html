@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/join.css" />
+		<link rel="stylesheet" type="text/css" href="../css/register.css" />
+         
+		<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/messages_cn.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/register.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function signup(){
+				$.ajax({
+					type: "POST",
+					dataType: "json",
+					url: "/api/register",
+	                cache:false,
+	                data: $('#signupForm').serialize(),
+	                success: function (result) { 	
+	                	if(result == 1){
+	                		window.location.href ="/login"
+	                	}else{
+	                		alert(result);
+	                	} ;
+	                },
+					error : function(result) {
+						//console.log(result)
+						alert(result.responseText);
+	                }
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+		
+		<!--/*最上面的黑框结束*/-->
+		<!--菜单部分开始-->
+		<div id="menu">
+			<div class="menu_box">
+
+				<div class="logo">
+					<img src="../img/logo1.png" />
+					<span class="head_land1 regi"> <a href="">注册</a></span>
+				</div>
+
+				<span>欢迎登陆</span>
+				<span id="logo_text">已有账号，请</span>
+				<span id="text" class="head_land"> <a href="land.html" style="color: #666666;">登录</a></span>
+			</div>
+		</div>
+		<!--菜单部分结束-->
+
+		<!--binner开始-->
+		<div id="binner">
+
+			<form action="##" method="post" onsubmit="return false"class="binner_box" id="signupForm">
+
+				<div class="div_group">
+					<label class="input_text ">用户名</label>
+					<input type="text" name="username" placeholder="您的账户名和登录名" class="nput_box" style="" />
+					<span name="error" class="error_span">*</span>
+				</div>
+
+				<div class="div_group">
+					<label class="input_text ">设置密码</label>
+					<input type="password" name="password2" placeholder="建议设置两种字符密码" class="nput_box" />
+					<span name="error" class="error_span">*</span>
+				</div>
+
+				<div class="div_group">
+					<label class="input_text ">确认密码</label>
+					<input type="password" name="password1" placeholder="再次输入密码" class="nput_box" />
+					<span name="error" class="error_span">*</span>
+				</div>
+
+				<div class="div_group">
+					<label class="input_text ">中国+86</label>
+					<input type="text" name="phone" placeholder="建议使用常用手机号" class="nput_box" />
+					<span name="error" class="error_span">*</span>
+				</div>
+
+				<div class="div_group" style="position: relative;">
+					<label class="input_text ">验证码</label>
+
+					<input type="text" name="yazheng" placeholder="请输入验证码" class="nput_box" />
+					<span class="error_span">* </span>
+					<span class="error_span" th:text="${yzErr}"> </span>
+					<p style="width: 72px;font-size: 14px;background-color:#1a83e5; padding: 5px;text-align: center;color: #fff;
+                     position: absolute; right: 3px;top: 5px;"><span th:text="${uuid}"></span> </p>
+
+				</div>
+				
+
+				<p style=" width: 390px; margin: 0 auto;margin-top: -44px;">
+					<input type="checkbox" name="check" id="" value="" /> 我已阅读并同意
+					<a href="### " style="color:#ffaa87 ; ">《乐购用户注册协议》</a>
+				</p>
+
+				<button type="button" onclick="signup()" id="at_register " style="width: 400px;background-color: #ff6600;height: 40px;margin-top: 30px;    margin-left: 404px;
+                      font-size: 16px;color: #fff;"> 立即注册</button>
+
+			</form>
+
+		</div>
+
+		<!--binner结束-->
+
+		<!--foot部分开始-->
+		
+			<div id="last" >
+
+				<p><span>公司简介</span> |
+					<a href="# ">Investor Relations</a> |
+					<a href="# ">网站联盟</a> |
+					<a href="# ">乐购招商</a> |
+					<a href="# ">机构销售</a> |
+					<a href="# ">手机乐购</a>
+				</p>
+				<p>Copyright &copy;乐购网 2004-2016, All Rights Reserved</p>
+			</div>
+	
+		<!--foot部分结束-->
+
+	</body>
+
+</html>

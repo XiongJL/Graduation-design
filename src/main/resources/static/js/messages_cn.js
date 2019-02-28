@@ -8,7 +8,6 @@ jQuery.extend(jQuery.validator.messages,{
 	number: "请输入合法的数字",
 	digits: "只能输入正整数",
 	creditcard: "请输入合法的信用卡号",
-	equalTo: "请再次输入相同的值",
 	accept: "请输入拥有合法后缀名的字符串",
 	maxlength: jQuery.validator.format("请输入一个长度最多是 {0} 的字符串"),
 	minlength: jQuery.validator.format("请输入一个长度最少是 {0} 的字符串"),

@@ -21,7 +21,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.PathVariable;
 
 import neu.xiong.ELK.design.dao.GoodsDao;
 import neu.xiong.ELK.design.entity.Goods;
@@ -32,7 +32,23 @@ public class GoodsController {
 	@Autowired 
 	private GoodsDao goodsDao;
 	
-	
+	@GetMapping(value = "/index")
+	public String index(Model model) {
+		/* 获取数据库的商品信息 */
+		List<Goods> result = goodsDao.indexGoods();
+		// System.out.println(result);
+		model.addAttribute("result", result);
+		return "index";
+	}
+
+	@GetMapping(value = "/goods/{goodsId}")
+	public String goods(@PathVariable("goodsId") int goodsId, Model model) {
+		Goods goods = goodsDao.findByGoodsId(goodsId);
+		System.out.println(goods);
+		model.addAttribute("goods", goods);
+	//	model.addAttribute("count",1);   //默认购物车选择1个商品，用于后台获取用户添加的个数
+		return "goods";
+	}
 	@GetMapping(value="/search")
 	public String search(String searchinput,String pageNumberTo ,Model model){
 		System.out.println(searchinput);

@@ -22,4 +22,9 @@ spring:
   thymeleaf: 
     cache: false
 server:
-  port: 8080 
+  port: 443
+  ssl: 
+    key-store: classpath:design.jks
+    key-store-password: d1Kh1c65
+    key-store-type: JKS
+    key-alias: alias

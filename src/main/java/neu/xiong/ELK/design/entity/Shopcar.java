@@ -8,11 +8,22 @@ import javax.persistence.Table;
 @Table(name="shopcar")
 public class Shopcar {
 	/*购物车id是用户ID,不需要自增*/
-	@Id
+	
 	private int ctid;
 	
 	/*存储的是购物车实体序列化信息*/
+	@Id
 	private String shopcar;
+	/*0尚未提交订单 ， 1 已提交订单*/
+	private int type;
+	
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
 
 	public int getCtid() {
 		return ctid;
@@ -32,8 +43,10 @@ public class Shopcar {
 
 	@Override
 	public String toString() {
-		return "Shopcar [ctid=" + ctid + ", shopcar=" + shopcar + "]";
+		return "Shopcar [ctid=" + ctid + ", shopcar=" + shopcar + ", type=" + type + "]";
 	}
+
+	
 	
 	
 	

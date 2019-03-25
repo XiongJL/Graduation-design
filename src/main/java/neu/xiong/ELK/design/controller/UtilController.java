@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 @CrossOrigin
 public class UtilController {
-
 		/*提供验证码*/
 		@GetMapping(value="/register")
 		public String reg(Model model,HttpServletRequest request){

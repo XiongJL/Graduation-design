@@ -58,13 +58,13 @@ $(function(){
 			price = parseFloat(price);
 			num = parseInt(num);
 			var rowsum = num*price;  //计算每行的价格总和
-			$(item).parent().parent().find("li.sumtotle").text(rowsum.toFixed(2)); //将总和显示在数量后面
+			$(item).parent().parent().find("li.sumtotle").text(rowsum.toFixed(0)); //将总和显示在数量后面
 			if($(item).parent().parent().find("input.one").prop("checked")){
 				sumprice+=rowsum;
 				count+=num;
 			}
 			$("span.totlecount").text(count);
-			$("span.totleprice").text(sumprice.toFixed(2));
+			$("span.totleprice").text(sumprice.toFixed(0));
 		});
 	
 	}

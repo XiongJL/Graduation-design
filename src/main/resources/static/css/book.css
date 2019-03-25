@@ -296,7 +296,7 @@ background-color:#101010;
 		border: 1px solid #E5E5E5;	
 }
 
-#book .content .text>a{
+#book .content .text>span>a{
 	display: inline-block;
 	width: 100px;
 	height: 40px;

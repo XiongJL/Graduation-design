@@ -137,7 +137,7 @@
 		
 	<div class="innerbox">		
 			<div id="header">
-				<a href="###" id="logo"><img src="bookimg/07.png"/></a>
+				<a href="###" id="logo"><img src="../bookimg/sousuo.png"/></a>
 
 			<!-- 引入搜索栏 -->
 			<div id="searchcontainer" th:include="searchTo :: searchTo">		</div>	       
@@ -164,12 +164,18 @@
 		</div>
 		<div class="shop spacil">
 			<ul th:each="data : ${result.data}">
-				<li style="width:150px;"><img th:src="|https://${data.goodsImg}|"/></li>
+				<li style="width:150px"><img th:src="|https://${data.goodsImg}|" th:onclick="toTheGoods([[|/goods/${data.goodsId}|]])"/></li>
 				<li style="width:600px;font-size:13px" th:text="${data.goodsInfo}"></li>
 				<li class="price" style="width:60px;color:red;font-size:18px;font-weight:bold" 
-				th:text="|${data.goodsPrice}￥|"></li>
+				th:text="|${data.goodsPrice}￥|"></li>			
 			</ul>	
-		
+		<!-- 点击图片跳转商品详细页 -->
+		<script type="text/javascript">
+			function toTheGoods(url){
+				console.log(url)
+				window.location.href=url
+			}
+		</script>
 		</div>
 		
 		<!--  分頁表 -->
@@ -188,7 +194,9 @@
 		</li>
 		<!-- 上一页 -->
       	
-      	<li th:each="i : ${#numbers.sequence(1,totalPages)}" > <a href="javascript:void(0)"></a> </li>  <!-- 循环 -->
+      	<li th:each="i : ${#numbers.sequence(1,totalPages)}" > 
+      	<a th:href="@{'/search?searchinput='+${result.searchinput}+'&pageNumberTo='+${i-1}}"></a>  <!-- 跳转到第几页 从0开始 -->
+      	</li>  <!-- 循环 -->
 		
 		
 		<li > 

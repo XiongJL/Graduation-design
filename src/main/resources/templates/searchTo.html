@@ -8,8 +8,8 @@
 <body>
 	<div id="searchcontainer" th:fragment="searchTo">
 				<form method="get" action="/search">
-					<input type="text" name="searchinput" class="keyword" value="创意文具"
-						data-title="创意文具" />
+					<input type="text" name="searchinput" class="keyword" placeholder="只能输入中文数字和英文"
+						data-title="小米"  pattern="^[0-9a-zA-Z\u4e00-\u9fa5]+$"/>
 					<input type="submit" class="btnsearch" value=""/>
 				</form>
 			</div>

@@ -7,6 +7,46 @@
 		<link rel="stylesheet" type="text/css" href="../css/book.css"/>
 		<script src="../js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/book.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		function ToLogin(){
+			window.location.href="/login";
+		};
+		</script>
+		<script type="text/javascript">
+		function ShopCar(){
+				var cusId = [[${session.cusId}]]
+				var count = document.getElementById("count").innerText	
+				var goodsId = [[${goods.goodsId}]]
+				var goodsPrice = [[${goods.goodsPrice}]]
+				
+				console.log(count);
+				console.log(cusId);
+				console.log(goodsId);
+				console.log(goodsPrice);
+				$.ajax({
+					type: "GET",
+					dataType: "text",
+					url: "/api/addShopCar",
+	                cache:false,
+	                data: {
+	                	"cusId":cusId,
+	                	"goodsId":goodsId,
+	                	"goodsPrice":goodsPrice,
+	                	"count":count
+	                },
+	                success: function (result) { 	
+	                	if(result == 1){
+	                		alert("添加购物车成功！");
+	                	}else{
+	                		alert("添加购物车失败！");
+	                	} ;
+	                },
+					error : function(result) {
+						console.log(result.responseText)
+	                }
+				});
+			}
+		</script>
 	</head>
 	<body>
 		<!--头部顶端登录注册栏开始-->
@@ -17,7 +57,8 @@
 			<!-- 引入搜索栏 -->
 			<div id="searchcontainer" th:include="searchTo :: searchTo">		</div>	       
 				<div id="shoppingcar">
-					<a href="###" class="car">购物车 <span>3</span></a><a href="###" class="order">我的订单</a>
+					<a th:href="@{'/api/shopcar/'+${session.cusId}}" class="car">购物车 <span>1</span></a>
+					<a href="###" class="order">我的订单</a>
 				</div>
 				<ul>
 					<li><a href="###">图书</a></li>
@@ -70,13 +111,20 @@
 						<span class="a">种类选择：</span> 
 						 <p><a href="###" class="b">平装版</a><a href="###">精装版</a></p>
 						<p class="add">
-							<span>1</span>
+							<span id="count">1</span>
 							<ul>
 								<li class="addnum">+</li>
 								<li class="reduce">-</li>
 							</ul>
-						<a th:href="@{'/api/addShopCar?cusId='+${session.cusId}+'&goodsId='+${goods.goodsId}}">加入购物车</a>
-						
+					<!-- 	<a th:href="@{'/api/addShopCar?cusId='+${session.cusId}+'&goodsId='+${goods.goodsId}}+'&count='+${count}">加入购物车</a>
+					 -->	
+					<span th:if="${session.state} eq 1">
+					 <a href="javascript:void(0);" onclick="ShopCar()">加入购物车</a>
+				
+					</span>
+					<span th:if="${session.state} neq 1">
+					 <a href="javascript:void(0);" onclick="ToLogin()">加入购物车</a>
+					</span>
 					</div>
 					
 				</div>

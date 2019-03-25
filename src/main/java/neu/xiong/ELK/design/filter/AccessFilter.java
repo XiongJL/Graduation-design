@@ -46,7 +46,7 @@ public class AccessFilter implements Filter{
 			if(session !=null && session.getAttribute("username")!=null){
 				chain.doFilter(req, res);
 			}else{
-				response.getWriter().write(this.NO_LOGIN);
+				response.sendRedirect("/login"); //重定向到登录界面
 			}
 		}
 	}

@@ -22,8 +22,8 @@
 			<div id="searchcontainer" th:include="searchTo :: searchTo">		</div>
 			
 			<div id="shoppingcar">
-				<a href="shopcar.html" class="car">购物车 <span>3</span></a><a
-					href="paycenter.html" class="order">我的订单</a>
+				<a th:href="@{'/api/shopcar/'+${session.cusId}}" class="car">购物车 <span>3</span></a>
+				<a href="paycenter.html" class="order">我的订单</a>
 			</div>
 			<ul>
 				<li><a href="book.html">图书</a></li>
@@ -1069,7 +1069,7 @@
 			<ul>
 				<li class="_active">
 					<div class="a">
-						<span class="red">1</span><a href="###">就喜欢你看不见我又干不掉我的样子</a>
+						<span class="red">1</span><a href="###">欢乐时光</a>
 					</div>
 					<div class="b">
 						<span class="red">1</span> <img src="img/index08_05.jpg" /> <a
@@ -1079,7 +1079,7 @@
 				</li>
 				<li>
 					<div class="a">
-						<span class="red">2</span><a href="###">就喜欢你看不见我又干不掉我的样子</a>
+						<span class="red">2</span><a href="###">欢乐时光</a>
 					</div>
 					<div class="b">
 						<span class="red">2</span> <img src="img/index08_05.jpg" /> <a
@@ -1088,7 +1088,7 @@
 				</li>
 				<li>
 					<div class="a">
-						<span class="red">3</span><a href="###">就喜欢你看不见我又干不掉我的样子</a>
+						<span class="red">3</span><a href="###">欢乐时光</a>
 					</div>
 					<div class="b">
 						<span class="red">3</span> <img src="img/index08_05.jpg" /> <a
@@ -1097,7 +1097,7 @@
 				</li>
 				<li>
 					<div class="a">
-						<span>4</span><a href="###">就喜欢你看不见我又干不掉我的样子</a>
+						<span>4</span><a href="###">欢乐时光</a>
 					</div>
 					<div class="b">
 						<span>4</span> <img src="img/index08_05.jpg" /> <a href="###">从你的全世界路过从你的全世界路过从你的全世界路过从你的全世界路过</a>
@@ -1105,7 +1105,7 @@
 				</li>
 				<li>
 					<div class="a">
-						<span>5</span><a href="###">就喜欢你看不见我又干不掉我的样子</a>
+						<span>5</span><a href="###">欢乐时光</a>
 					</div>
 					<div class="b">
 						<span>5</span> <img src="img/index08_05.jpg" /> <a href="###">从你的全世界路过从你的全世界路过从你的全世界路过从你的全世界路过</a>
@@ -1113,7 +1113,7 @@
 				</li>
 				<li>
 					<div class="a">
-						<span>6</span><a href="###">就喜欢你看不见我又干不掉我的样子</a>
+						<span>6</span><a href="###">欢乐时光</a>
 					</div>
 					<div class="b">
 						<span>6</span> <img src="img/index08_05.jpg" /> <a href="###">从你的全世界路过从你的全世界路过从你的全世界路过从你的全世界路过</a>
@@ -1121,7 +1121,7 @@
 				</li>
 				<li>
 					<div class="a">
-						<span>7</span><a href="###">就喜欢你看不见我又干不掉我的样子</a>
+						<span>7</span><a href="###">欢乐时光</a>
 					</div>
 					<div class="b">
 						<span>7</span> <img src="img/index08_05.jpg" /> <a href="###">从你的全世界路过从你的全世界路过从你的全世界路过从你的全世界路过</a>
@@ -1917,7 +1917,7 @@
 		<li><a href="###"><img src="img/two_30.jpg" /></a></li>
 		<li class="middle"><img src="img/two_34.jpg" id="codeimg" /><a
 			href="###"><img src="img/two_35.jpg" /></a></li>
-		<li class="licar"><span>26</span><a href="###"><img
+		<li class="licar"><span>26</span><a th:href="@{'/api/shopcar/'+${session.cusId}}"><img
 				src="img/two_40.jpg" /></a></li>
 	</ul>
 	<!--二维码结束-->

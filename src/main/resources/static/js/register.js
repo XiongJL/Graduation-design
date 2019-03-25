@@ -79,10 +79,7 @@ function _inputO() {
 	yazheng.onfocus = function() {
 		yazheng.placeholder = '';
 	}
-	var yazheng1 = document.getElementsByName('yz')[0];
-	yazheng1.onfocus = function() {
-		yazheng1.placeholder = '';
-	}
+
 }
 
 function a() {	

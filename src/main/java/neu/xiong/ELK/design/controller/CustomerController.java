@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -49,22 +50,7 @@ public class CustomerController {
 		return "entry";
 	}
 
-	@GetMapping(value = "/index")
-	public String index(Model model) {
-		/* 获取数据库的商品信息 */
-		List<Goods> result = goodsDao.indexGoods();
-		// System.out.println(result);
-		model.addAttribute("result", result);
-		return "index";
-	}
-
-	@GetMapping(value = "/goods/{goodsId}")
-	public String goods(@PathVariable("goodsId") int goodsId, Model model) {
-		Goods goods = goodsDao.findByGoodsId(goodsId);
-		System.out.println(goods);
-		model.addAttribute("goods", goods);
-		return "goods";
-	}
+	
 
 	/**
 	 * 加上@ResponseBody 以JSON格式返回数据,而不是默认的视图层了
@@ -116,7 +102,19 @@ public class CustomerController {
 			return "entry";
 		}
 	}
-
+/**
+ *   另一种错误提示思路： 
+ *   	在每一个输入框添加一个页面失去焦点事件。
+ *     事件发生后，立马异步传输值到后台，后台根据值查询数据库，并给出
+ *     相应提示，例如，账号已存在啥的。
+ * @param username
+ * @param password2
+ * @param password1
+ * @param phone
+ * @param yazheng
+ * @param request
+ * @return
+ */
 	@Transactional
 	@PostMapping(value = "/api/register")
 	@ResponseBody
@@ -126,6 +124,10 @@ public class CustomerController {
 		HttpSession session = request.getSession();
 //		System.out.println("uuid: " + session.getAttribute("uuid"));
 //		System.out.println(yazheng.equals(session.getAttribute("uuid")));
+		
+		if(!Pattern.matches("^[0-9a-zA-Z\\u4e00-\\u9fa5]+$", username)){
+			return "3";
+		}
 		if (password1.equals(password2)) {
 			if (cusDao.findByUsername(username) != null) {
 				// model.addAttribute("userErr","用户已存在");

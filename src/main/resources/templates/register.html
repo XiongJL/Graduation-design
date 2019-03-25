@@ -22,7 +22,10 @@
 	                success: function (result) { 	
 	                	if(result == 1){
 	                		window.location.href ="/login"
-	                	}else{
+	                	}else if(result ==3){
+	                		alert ("用户名格式错误！")
+	                	}
+	                	else{
 	                		alert(result);
 	                	} ;
 	                },
@@ -47,7 +50,7 @@
 					<span class="head_land1 regi"> <a href="">注册</a></span>
 				</div>
 
-				<span>欢迎登陆</span>
+				<span>欢迎注册</span>
 				<span id="logo_text">已有账号，请</span>
 				<span id="text" class="head_land"> <a href="land.html" style="color: #666666;">登录</a></span>
 			</div>
@@ -61,13 +64,13 @@
 
 				<div class="div_group">
 					<label class="input_text ">用户名</label>
-					<input type="text" name="username" placeholder="您的账户名和登录名" class="nput_box" style="" />
+					<input type="text" pattern="^[0-9a-zA-Z\u4e00-\u9fa5]+$" name="username" placeholder="您的账户名和登录名" class="nput_box" style="" />
 					<span name="error" class="error_span">*</span>
 				</div>
 
 				<div class="div_group">
 					<label class="input_text ">设置密码</label>
-					<input type="password" name="password2" placeholder="建议设置两种字符密码" class="nput_box" />
+					<input type="password" name="password2" pattern="‘"placeholder="允许非 ' 的所有符号" class="nput_box" />
 					<span name="error" class="error_span">*</span>
 				</div>
 
@@ -89,7 +92,7 @@
 					<input type="text" name="yazheng" placeholder="请输入验证码" class="nput_box" />
 					<span class="error_span">* </span>
 					<span class="error_span" th:text="${yzErr}"> </span>
-					<p style="width: 72px;font-size: 14px;background-color:#1a83e5; padding: 5px;text-align: center;color: #fff;
+					<p onclick="refreshYz()" style="width: 72px;font-size: 14px;background-color:#1a83e5; padding: 5px;text-align: center;color: #fff;
                      position: absolute; right: 3px;top: 5px;"><span th:text="${uuid}"></span> </p>
 
 				</div>
